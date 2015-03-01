@@ -31,9 +31,6 @@
   <div class="label"><%= f.label :好きな画像を添付 %><br />
     <%= f.file_field :avatar %>
   </div>
-  <div>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-  </div>
 
   <div class="actions">
     <%= f.submit "新規登録" %>
