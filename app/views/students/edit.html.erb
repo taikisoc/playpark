@@ -1,0 +1,19 @@
+<h2>自己紹介記入ページ</h2>
+
+<%= form_tag("/students/#{current_user.id}", method: :patch) %>
+  <div>
+    <p>
+      名前：<input type="text" name="fullname" size="40" maxlength="20" >
+    </p>
+  </div>
+  <div class="under-box">
+    <p>
+      自己紹介記入:<br>
+      <textarea name="introduction"  maxlength="1000" ></textarea>
+    </p>
+  </div>
+  <div class="submit-button">
+    <p>
+      <input type="submit" value="送信する">
+    </p>
+  </div>

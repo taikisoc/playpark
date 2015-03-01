@@ -1,0 +1,2 @@
+module DantaiHelper
+end

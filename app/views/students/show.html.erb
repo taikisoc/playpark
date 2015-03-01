@@ -1,0 +1,46 @@
+<div class="who-box-biggest">
+  <div class="clearfix">
+    <div class="who-box-left">
+      <div class="who-is">
+        <% if @user.fullname.blank? %>
+          <h3><%= @user.nickname %>はどんなお人？</h3>
+        <% else %>
+          <h3><%= @user.fullname %>はどんなお人？</h3>
+        <% end %>
+      </div>
+      <div class="who-image">
+        <img src="<%= @user.avatar %>" class="student_image">
+      </div>
+      <div class="who-name">
+        <% if @user.fullname.blank? %>
+          <h4>なまえ：<%= @user.nickname %></h4>
+        <% else %>
+          <h4>なまえ：<%= @user.fullname %></h4>
+        <% end %>
+      </div>
+      <div class="who-hobby">
+        <div>
+          <h4>しゅみ 1.　<%= @user.hobby_1 %></h4>
+        </div>
+        <div>
+          <h4>しゅみ 2.　<%= @user.hobby_2 %></h4>
+        </div>
+      </div>
+    </div>
+    <div class="who-box-right">
+      <% if user_signed_in? && (current_user.separate == 2 || current_user.separate == 1) %>
+          <div class="who-born">
+            <h2>生い立ち</h2>
+          </div>
+          <div class="who-what">
+            <h5><%= @user.introduction %></h5>
+          </div>
+        <% if user_signed_in? &&  current_user.separate == 1 %>
+          <div class="who-lunch">
+            <h3><%= link_to 'ランチする', "#{@user.id}/schedules/new" %></h3>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

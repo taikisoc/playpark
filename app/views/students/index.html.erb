@@ -1,0 +1,35 @@
+  <div class="students-top-logo">
+    <div class="student-show-logo">
+      <h2>スタッフ紹介</h2>
+    </div>
+  </div>
+  <div class="student_full_view">
+    <ul class="clearfix">
+      <li>
+        <% @users.each do |gakusei|%>
+          <div class="intro-box">
+            <div>
+              <img src="<%= gakusei.avatar %>" class="student_image">
+            </div>
+            <div class="index-fullname">
+                <%= gakusei.fullname %>
+            </div>
+            <div>
+              <%= gakusei.hobby_1 %>
+            </div>
+            <div>
+              <%= gakusei.hobby_2 %>
+            </div>
+            <div>
+              <%= link_to '自己紹介表示', "students/#{gakusei.id}",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;" %>
+            </div>
+              <% if user_signed_in? && current_user.separate == 2 && current_user.id == gakusei.id %>
+                <div class="write-button">
+                  <%= link_to '自己紹介記入', "students/#{gakusei.id}/edit" %>
+                </div>
+              <% end %>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,368 @@
+/*<home_page>*/
+header{
+  width:100%;
+  height:auto;
+}
+
+body{
+  background-color: #FFFFFF
+}
+.overhidden{
+  overflow: hidden;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#slideshow img{
+  width:100%;
+  background-repeat: no-repeat;
+  margin:0 auto ;
+  background-position: center center;
+  margin-top: 6px;
+  border: 7px ;
+  height: auto;
+}
+
+/*#slideshow {
+   position: relative;
+   height: 428px;
+}
+#slideshow img {
+   position: absolute;
+   top: 0;
+   left:0;
+   z-index: 8;
+   opacity: 0.0;
+}
+#slideshow img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+#slideshow img.last-active {
+   z-index: 9;
+}
+*/
+.header-upper{
+  width: 100%;
+  }
+.logo{
+  float: left;
+  text-align: center;
+  margin-left: 23px;
+  height: 99px;
+  width: 339px;
+}
+
+.logo  h3{
+  width: 300px;
+  margin: 0;
+  margin-top: 27px;
+  font-size: 63px;
+  font-family: fantasy;
+}
+
+.logo a{
+  text-decoration: none;
+}
+
+.upper-list{
+  float:left;
+}
+.upper-list a{
+}
+
+.upper-list a:hover {color:green;}
+
+.header-upper-right{
+  float: right;
+  margin: 0;
+  width: 476px;
+  margin-top: 32px;
+}
+.header-upper-right li{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+.header-lower{
+  width:100%;
+}
+
+.header-lower ul{
+  width:100%;
+  margin: 0;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.header-lower ul li{
+  list-style-type:none;
+  margin:9px 8px;
+  display:inline-block;
+}
+
+.header-list a{
+  font-size: 23px;
+}
+.header-list a:hover {color:green;}
+
+.header-list{
+  float-left
+}
+.logo-under h3{
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.logo-under{
+  width:;
+}
+
+
+/*<home_page>*/
+
+/*<introduction_index>*/
+.student-show-logo{
+  width: 36%;
+  border: 5px outset #eeffff;
+  text-align: center;
+  margin-top: 36px;
+  margin-left: 37px;
+}
+.student-show-logo h2{
+  font-size: 48px;
+  margin-left: 30px;
+  margin:0;
+}
+
+.students-top-logo{
+  width:100%;
+  }
+..students-top-logo  h2{
+  margin:0;
+}
+
+.student_image{
+  border-radius: 220px;
+  width: 200px;
+  height: 200px;
+}
+.student_full_view{
+  width:100%;
+  padding: 7px;
+}
+.intro-box{
+  padding:3px;
+  width:215px;
+  height:350px;
+  margin:10px 10px 10px 10px;
+  float:left;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+li{
+  list-style-type: none;
+  padding: 1px 15px;
+}
+.list a{
+  font-size: 21px;
+}
+.write-button{
+
+}
+/*<introduction_index>*/
+
+/*<introduction_write>*/
+
+.under-box p textarea {
+  width: 400px;
+  height: 300px;
+}
+
+.submit-button p input{
+  width:100px;
+  height: 80px;
+  font-size: 20px;
+}
+.success{
+  width: 46%;
+height: 200px;
+margin: auto;
+text-align: center
+}
+.success a{
+  margin-top: 85px;
+  font-size: 25px;
+}
+
+/*<introduction_write>*/
+/*<introduction_show>*/
+
+.who-box-biggest{
+  margin:0 auto ;
+}
+
+.who-box{
+  width:100%;
+  height:499px;
+}
+
+.who-is{
+  width:87%;
+  height: 36px;
+  margin: 17px;
+}
+
+.who-name{
+  width: 79%;
+  height: 26px;
+  margin: 24px;
+}
+
+.who-image{
+  border-radius: 220px;
+  width: 235px;
+  height: 233px;
+  margin:5px 5px;
+}
+.who-image img{
+  margin: 10px 37px;
+}
+.who-hobby{
+  width: 99%;
+  height: 162px;
+}
+.who-hobby h4{
+  margin: 18px;
+}
+.who-born{
+  width: 33%;
+}
+.who-what{
+  width: 97%;
+  height: 370px;
+}
+
+.who-what h5{
+   letter-spacing: 0.5em;
+}
+.who-box-left{
+  float: left;
+  width: 45%;
+  height: 537px;
+}
+.who-box-right{
+  float: right;
+  width:55%;
+}
+
+
+/*<introduction_show>*/
+
+/*<mail_success>*/
+.mail-success{
+  width: 100%;
+text-align: center;
+margin-top: 225px;
+
+}
+
+.button-close{
+  margin: auto;
+  width:150px;
+  height: 30px
+  text-align: center;
+}
+
+  /*<mail_success>*/
+/*<event_page>*/
+
+
+.midashi{
+  margin-left:50px;
+  width: 23%;
+  text-align: center;
+}
+.midashi h1{
+  margin-top: 0;
+  background-color: #F5F5F5;
+}
+
+.event_big_box{
+ width: 78%;
+  height: 602px;
+  margin-left: 128px;
+  background-color: #F5F5F5;
+}
+.event_left{
+  float: left;
+  width:  55%;
+  height: 670px;
+}
+.event_date{
+  width: 90%;
+  height: 90px;
+  margin-top: 55px;
+}
+.event_date h3{
+  margin: 0;
+  font-size: 74px;
+  text-align: center;
+}
+.event_time{
+  width: 54%;
+  margin-left: 57px;
+  margin-top: 40px;
+}
+
+.event_time h3{
+  font-size: 57px;
+  margin: 0;
+}
+
+.event_place{
+ width: 60%;
+  height: 66px;
+  margin-left: 85px;
+  margin-top: 23px;
+}
+.event_place h2{
+  margin: 0;
+  font-size: 33px;
+}
+
+.event_people{
+  width:45%;
+  margin-left: 71px;
+}
+.event_right{
+  float:right;
+  width:45%;
+  height: 670px;
+}
+.event_image{
+  width: 406px;
+  height: 340px;
+}
+.event_else{
+  width:50%;
+}
+.for_administrator{
+  width: 33%;
+  height: 53px;
+}
+
+
+
+/*<event_page>*/
+
+
+

@@ -1,0 +1,16 @@
+<div class="big_box">
+  <% @parks.each do |park|%>
+    <div class="each_box">
+      <div class="park_name">
+        <h6><%= park.park_name %></h6>
+      </div>
+        <img src="https://www.tokyo-park.or.jp<%= park.image_url %>">
+      </div>
+  <% end %>
+  <%= paginate(@parks) %>
+</div>
+<div>
+<%= form_for('/search', method: :get) do |f| %>
+                <input class="search__query" name="keyword" placeholder="公園名で検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+              <% end %>
+</div>

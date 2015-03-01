@@ -1,0 +1,59 @@
+<!-- <head>
+    <% if user_signed_in? && current_user.permission == 0 %>
+    <SCRIPT LANGUAGE="JavaScript">
+var cnt = 0;
+{
+if(cnt == 0){
+alert("ログインは完了しましたが、あなたは管理者からの認証がありません！");
+}
+cnt = 1;
+}
+
+</SCRIPT>
+    <% end %>
+    </head> -->
+
+
+
+  <div class="event-bigbox">
+    <div class="row">
+      <div class="midashi">
+        <h1>イベント情報</h1>
+      </div>
+    </div>
+    <% @activity.each do |act| %>
+      <div class="row">
+        <div class="event_big_box">
+        <div class="clearfix">
+          <div class="event_left">
+            <div class="event_date">
+              <h3><%= act.event_date %></h3>
+            </div>
+            <div class="event_time">
+              <h3><%= act.event_time %></h3>
+            </div>
+            <div class="event_place">
+              <h2><%= act.event_place %></h2>
+            </div>
+            <div class="event_people">
+              学生スタッフ,ゲスト：<h4><%= act.event_people %></h4>
+            </div>
+          </div>
+          <div class="event_right">
+            <div class="event_image">
+            <img src="<%= act.event_place_img %>">
+            </div>
+            <div class="event_else">
+              <h5><%=act.event_else %></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="for_administrator">
+      <% if user_signed_in? && current_user.administrator == 1 %>
+        <%= link_to '次回イベント情報記入', "/tops/new" %>
+      <% end %>
+    </div>
+  </div>
