@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   resources :park
   resources :dantai
   resources :tops
-  get "", to: "top#index", as: "user_root"
 
 
 
