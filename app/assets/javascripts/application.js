@@ -30,3 +30,4 @@ $active.fadeOut($fade_speed).removeClass("active");
 $next.fadeIn($fade_speed).addClass("active");
 },$interval);
 });
+//= require bootstrap-sprockets

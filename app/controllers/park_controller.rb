@@ -6,7 +6,7 @@ class ParkController < ApplicationController
       @parks = Park.page(params[:page]).per(8).order('id asc')
     end
   end
-  def search
-    @parks = Park.where('title LIKE(?)', "#{search_params[:keyword]}")
-  end
+  # def search
+  #   @parks = Park.where('title LIKE(?)', "#{search_params[:keyword]}")
+  # end
 end

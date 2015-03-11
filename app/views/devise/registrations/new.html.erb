@@ -1,40 +1,54 @@
-<h2>新規登録</h2>
+<div class="login-p">
+<div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
+  <div id="yjContentsBody">
+    <div class="yjContainer">
+      <div class="form_box">
+        <div class="container">
+          <div class="panel panel-primary verticalcenter2">
+            <div class="panel-heading">
+              <div class="panel-title"><h2>新規登録</h2></div>
+            </div>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+              <div class="field"><br />
+                ママパパ：<%= f.radio_button 'separate', '1', {:checked => true} %>
+                学生：<%= f.radio_button 'separate', '2', {} %>
+              </div>
+              <div class="field">
+                  <%= f.label :名前を入力 %><br />
+                  <%= f.text_field :fullname , :placeholder => '(半角スペースなし)'%>
+              </div>
+              <div class="field">
+                <%= f.label :メールアドレス入力 %><br />
+                <%= f.email_field :email,:placeholder => 'こちらのアドレスに連絡がいきます'%>
+              </div>
 
-  <div class="field"><br />
-    ママパパ：<%= f.radio_button 'separate', '1', {:checked => true} %>
-    学生：<%= f.radio_button 'separate', '2', {} %>
-  </div>
-  <div class="field">
-    <%= f.label :名前を入力 %><br />
-    <%= f.text_field :fullname , :placeholder => '(半角スペースなし)'%>
-  </div>
-  <div class="field">
-    <%= f.label :メールアドレス入力 %><br />
-    <%= f.email_field :email,:placeholder => 'こちらのアドレスに連絡がいきます'%>
-  </div>
+              <div class="field">
+                <%= f.label :パスワードを入力 %>
+                <% if @validatable %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワード入力' %>
+              </div>
 
-  <div class="field">
-    <%= f.label :パスワードを入力 %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワード入力' %>
-  </div>
+              <div class="field">
+                <%= f.label :パスワード入力確認 %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" ,:placeholder => 'パスワード確認'%>
+              </div>
+              <div class="label"><%= f.label :好きな画像を添付 %><br />
+                <%= f.file_field :avatar %>
+              </div>
 
-  <div class="field">
-    <%= f.label :パスワード入力確認 %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" ,:placeholder => 'パスワード確認'%>
+              <div class="actions">
+                <%= f.submit "新規登録" %>
+              </div>
+            <% end %>
+             <%= render "devise/shared/links" %>
+           </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="label"><%= f.label :好きな画像を添付 %><br />
-    <%= f.file_field :avatar %>
-  </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

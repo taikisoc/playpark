@@ -1,0 +1,47 @@
+<h2>過去情報を編集</h2>
+
+<%= form_tag("/tops/#{@activity.id}", method: :patch) %>
+  <div>
+      <p>開催場所：
+        <%= text_field_tag :event_place, nil ,:size=>"30" %>
+      </p>
+    </div>
+    <div>
+      <p>最寄り駅：
+        <%= text_field_tag :event_station %>
+      </p>
+    </div>
+    <div>
+      <p>開催時間：
+        <%= text_field_tag :event_time %>
+      </p>
+    </div>
+    <div>
+      <p>開催日：
+        <%= text_field_tag :event_date %>
+      </p>
+    </div>
+    <div>
+      <p>公園画像：
+        <%= text_field_tag :event_place_img %>
+      </p>
+    </div>
+    <div>
+      <p>お越しになるスタッフ、ゲスト：
+        <%= text_field_tag :event_people %>
+      </p>
+    </div><div>
+      <p>持ち物：
+        <%= text_field_tag :event_bring %>
+      </p>
+    </div>
+    <div>
+      <p>その他：
+        <%= text_field_tag :event_else %>
+      </p>
+    </div>
+    <div>
+      <p>
+        <input type="submit" value="送信する">
+      </p>
+    </div>

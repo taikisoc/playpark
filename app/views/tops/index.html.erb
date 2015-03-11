@@ -1,59 +1,69 @@
-<!-- <head>
-    <% if user_signed_in? && current_user.permission == 0 %>
-    <SCRIPT LANGUAGE="JavaScript">
-var cnt = 0;
-{
-if(cnt == 0){
-alert("ログインは完了しましたが、あなたは管理者からの認証がありません！");
-}
-cnt = 1;
-}
-
-</SCRIPT>
-    <% end %>
-    </head> -->
-
-
-
-  <div class="event-bigbox">
-    <div class="row">
-      <div class="midashi">
-        <h1>イベント情報</h1>
-      </div>
-    </div>
-    <% @activity.each do |act| %>
+<div class="container-every">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">過去のイベント</a></li>
+    <li><a href="#tab2" data-toggle="tab">次回のイベント</a></li>
+  </ul>
+</div>
+<!-- / タブ-->
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="tab1">
+    <div class="container-every">
       <div class="row">
-        <div class="event_big_box">
-        <div class="clearfix">
-          <div class="event_left">
-            <div class="event_date">
-              <h3><%= act.event_date %></h3>
-            </div>
-            <div class="event_time">
-              <h3><%= act.event_time %></h3>
-            </div>
-            <div class="event_place">
-              <h2><%= act.event_place %></h2>
-            </div>
-            <div class="event_people">
-              学生スタッフ,ゲスト：<h4><%= act.event_people %></h4>
-            </div>
-          </div>
-          <div class="event_right">
-            <div class="event_image">
-            <img src="<%= act.event_place_img %>">
-            </div>
-            <div class="event_else">
-              <h5><%=act.event_else %></h5>
-            </div>
-          </div>
+        <div class="col-xs-2 col-xs-offset-1">
+          <a>過去イベント検索</a>
+          <%= form_for('/search', method: :get) do |f| %>
+            <input class="search__query" name="keyword" placeholder="開催公園名で検索" type="text" value=""><button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+          <% end %>
         </div>
       </div>
-    <% end %>
-
-    <div class="for_administrator">
-      <% if user_signed_in? && current_user.administrator == 1 %>
-        <%= link_to '次回イベント情報記入', "/tops/new" %>
-      <% end %>
+      <div class="event-bigbox">
+        <div class="row">
+          <% @activities.each do |act| %>
+            <div class="col-xs-12 col-md-12">
+              <div class="event_big_box">
+                <div class="clearfix">
+                  <div class="event_left">
+                    <div class="event_date">
+                      <h3><%= act.event_date %></h3>
+                    </div>
+                    <div class="event_place">
+                      <h2><%= act.event_place %></h2>
+                    </div>
+                    <div class="event_people">
+                      学生スタッフ,ゲスト：<h4><%= act.event_people %></h4>
+                    </div>
+                  </div>
+                  <div class="event_right">
+                    <div class="event_image">
+                      <img src="<%= act.event_place_img %>">
+                    </div>
+                    <div class="event-right-under">
+                      <a href="tops/<%= act.id %>">詳細表示</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row for_administrator">
+        <div class="col-xs-5 col-xs-offset-1">
+          <% if user_signed_in? && current_user.administrator == 1 %>
+            <%= link_to '過去イベント情報記入', "/tops/new" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="container-every">
+      <div class="row pagination-box">
+        <div class="col-xs-6  col-md-6 col-md-offset-5 col-xs-offset-5">
+          <%= paginate(@activities) %>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="tab-pane fade " id="tab2">
+  <!--ここに次回イベント -->
+  </div>
+</div>

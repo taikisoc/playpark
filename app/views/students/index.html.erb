@@ -1,30 +1,30 @@
-  <div class="students-top-logo">
-    <div class="student-show-logo">
+  <div class="row">
+    <div class="students-show-logo container-top">
       <h2>スタッフ紹介</h2>
     </div>
   </div>
-  <div class="student_full_view">
-    <ul class="clearfix">
+  <div class="row">
+    <ul class="container-every">
       <li>
         <% @users.each do |gakusei|%>
-          <div class="intro-box">
+          <div class="intro-box well">
             <div>
               <img src="<%= gakusei.avatar %>" class="student_image">
             </div>
             <div class="index-fullname">
-                <%= gakusei.fullname %>
+              <a>名前 : <%= gakusei.fullname %></a>
             </div>
-            <div>
-              <%= gakusei.hobby_1 %>
+            <div class="index-hobby1">
+              <a>趣味1 : <%= gakusei.hobby_1 %></a>
             </div>
-            <div>
-              <%= gakusei.hobby_2 %>
+            <div class="index-hobby2">
+              <a>趣味2 : <%= gakusei.hobby_2 %></a>
             </div>
-            <div>
-              <%= link_to '自己紹介表示', "students/#{gakusei.id}",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;" %>
+            <div class="intro-button st-btn btn btn-primary">
+              <%= link_to '自己紹介表示', "students/#{gakusei.id}",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;",:style => "color:white;" %>
             </div>
               <% if user_signed_in? && current_user.separate == 2 && current_user.id == gakusei.id %>
-                <div class="write-button">
+                <div class="intro-button st-btn btn btn-primary">
                   <%= link_to '自己紹介記入', "students/#{gakusei.id}/edit" %>
                 </div>
               <% end %>

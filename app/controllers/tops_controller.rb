@@ -1,20 +1,49 @@
 class TopsController < ApplicationController
   def index
-    @activity = Activity.order('id DESC').limit(1)
+    if params[:keyword].present?
+      @activities = Activity.where('event_place LIKE ?', "%#{params[:keyword]}%").page(params[:page]).order('id DESC').limit(2)
+    else
+      @activities = Activity.page(params[:page]).per(2).order('id desc')
+    end
   end
+
   def sign_up
     
   end
+
   def new
     
   end
+
+  def show
+    @activity = Activity.find(params_show[:id])
+  end
+
   def create
     Activity.create(event_params)
+  end
+
+  def edit
+    @activity = Activity.find(params_edit[:id])
+  end
+
+  def update
+    @activity = Activity.find(params[:id])
+    activity = Activity.find(params[:id])
+    activity.update(event_params)
   end
 
   private
   def event_params
     params.permit(:event_place, :event_station, :event_time, :event_date, :event_people, :event_bring, :event_else, :event_place_img)
   end
-end
 
+  def params_edit
+    params.permit(:id)
+  end
+
+  def params_show
+    params.permit(:id)
+  end
+
+end

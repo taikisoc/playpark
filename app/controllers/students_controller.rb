@@ -9,14 +9,25 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(show_params[:id])
   end
+
   def update
     user = User.find(current_user.id)
     user.update(update_params)
   end
+
+  private
   def update_params
     params.permit(:fullname, :introduction)
+  end
+
+  def edit_params
+    params.permit(:id)
+  end
+
+  def show_params
+    params.permit(:id)
   end
 end
 
