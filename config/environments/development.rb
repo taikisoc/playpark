@@ -47,11 +47,12 @@ config.action_mailer.smtp_settings = {
   :address => 'smtp.gmail.com',
   :port => 587,
   :domain => 'gmail.com',
-  :user_name => 'taitaisb0831@gmail.com',
-  :password => 'felicetai12',
+  :user_name => 'trippark.smile2525@gmail.com',
+  :password => 'Funfunpark2014',
   :authentication => :plain,
   :enable_starttls_auto => true
 }
+
 
 
 end

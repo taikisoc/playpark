@@ -4,12 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>さんからランチの申請がありました。</h1>
-  <P>
-    まるまるさんの希望日はまるまる。
+  <%= @user.nickname %>さんからランチの申請がありました。
+
+    <%= @user.nickname %>さんの希望日は。
     希望場所はまるまるです。
     まるまるさんの自己紹介は下記です。
-  </P>
   <p>
     このリンクをクリックして、サイトにログインしてください: <%= @url %>.
   </p>

@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
   root 'tops#index'
   devise_for :users
-  resources :students
   resources :park
   resources :dantai
-  resources :tops
+  # ログイントークン
+  get 'token/:uuid', :to => 'users#token'
+
+
+
+  resources :tops do
+    collection do
+      resources :nextacts, only: [:index,:new,:show,:create]
+    end
+  end
 
 
 

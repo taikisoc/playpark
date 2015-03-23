@@ -1,59 +1,102 @@
-<!-- <head>
-    <% if user_signed_in? && current_user.permission == 0 %>
-    <SCRIPT LANGUAGE="JavaScript">
-var cnt = 0;
-{
-if(cnt == 0){
-alert("ログインは完了しましたが、あなたは管理者からの認証がありません！");
-}
-cnt = 1;
-}
-
-</SCRIPT>
-    <% end %>
-    </head> -->
-
-
-
-  <div class="event-bigbox">
-    <div class="row">
-      <div class="midashi">
-        <h1>イベント情報</h1>
+<div class="container-every">
+<% if user_signed_in? %>
+  <ul class="nav-upper nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">過去のイベント</a></li>
+    <li><a href="#tab2" data-toggle="tab">次回のイベント</a></li>
+  </ul>
+  <% else %>
+  <ul class="nav-upper nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">過去のイベント</a></li>
+  </ul>
+  <% end %>
+</div>
+<!-- / タブ-->
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade in active" id="tab1">
+    <div class="container-every">
+      <div class="event_top_container">
+        <div class="search-form-top">
+          <label class="control-label search-label">過去イベント検索</label>
+          <%= form_for('/search', method: :get) do |f| %>
+            <div class="input-group search-form">
+              <input class="search__query" name="keyword" placeholder="開催公園名で検索" type="text" value="">
+                <input class="btn-search" title="検索" value="検索" type="submit">
+                  <i class="icon-search"></i>
+                </input>
+            </div>
+          <% end %>
+        </div>
+        <% if user_signed_in? && current_user.administrator == 1 %>
+        <div class="row for_administrator">
+          <div class="link_to_form_top"><%= link_to '過去イベント情報記入', "/tops/new" %></div>
+          <div class="link_to_form_top"><%= link_to '次回イベント情報記入', "/tops/nextacts/new" %></div>
+        </div>
+        <% end %>
       </div>
-    </div>
-    <% @activity.each do |act| %>
-      <div class="row">
-        <div class="event_big_box">
-        <div class="clearfix">
-          <div class="event_left">
-            <div class="event_date">
-              <h3><%= act.event_date %></h3>
+      <div class="container-every">
+        <div class="row">
+          <% @activities.each do |act| %>
+            <div class="event_big_box1">
+              <div class="clearfix1">
+                <div class=" event_date1">
+                  <h1><%= act.event_date %></h1>
+                </div>
+                <div class="event_what1">
+                  <h1><%= act.event_what %></h1>
+                </div>
+                <div class=" event_right1">
+                  <div class="event_image1">
+                    <img src="<%= act.event_img1  if act.present? %>">
+                  </div>
+                  <div class="event_image2">
+                    <img src="<%= act.event_img2  if act.present? %>">
+                  </div>
+                  <div class="event_image3">
+                    <img src="<%= act.event_img3  if act.present? %>">
+                  </div>
+                </div>
+                <div class="event-right-under">
+                    <a href="tops/<%= act.id %>">詳細表示</a>
+                </div>
+              </div>
             </div>
-            <div class="event_time">
-              <h3><%= act.event_time %></h3>
-            </div>
-            <div class="event_place">
-              <h2><%= act.event_place %></h2>
-            </div>
-            <div class="event_people">
-              学生スタッフ,ゲスト：<h4><%= act.event_people %></h4>
-            </div>
-          </div>
-          <div class="event_right">
-            <div class="event_image">
-            <img src="<%= act.event_place_img %>">
-            </div>
-            <div class="event_else">
-              <h5><%=act.event_else %></h5>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
-
-    <div class="for_administrator">
-      <% if user_signed_in? && current_user.administrator == 1 %>
-        <%= link_to '次回イベント情報記入', "/tops/new" %>
-      <% end %>
+    </div>
+    <div class="container-every">
+      <div class="row pagination-box">
+        <div class="col-xs-12 col-sm-10 col-md-7 col-xs-offset-1 col-sm-offset-2 col-md-offset-4">
+          <%= paginate(@activities) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tab2">
+    <div class="container-every">
+      <div class="row">
+        <% @nextacts.each do |nexta| %>
+          <div class="next_event_big_box">
+            <div class="clearfix1">
+              <div class=" event_left1">
+                <div class=" event_date1">
+                  <h1><%= nexta.event_date %></h1>
+                </div>
+                <div class="event_date1">
+                  <h1><%= nexta.event_place %></h1>
+                </div>
+                <div class="event_what1">
+                  <h1><%= nexta.event_what %></h1>
+                </div>
+              </div>
+              <div class="event_right1">
+                <div class="event_image1">
+                  <img src="<%= nexta.next_event_img  if nexta.present? %>">
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>

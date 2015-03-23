@@ -1,0 +1,17 @@
+<%= form_tag("/tops/nextacts",method: :post ,multipart: true) do%>
+  <%= label_tag :event_place %>
+  <%= text_field_tag :event_place %>
+
+  <%= label_tag :event_what %>
+  <%= text_field_tag :event_what %>
+
+  <%= label_tag :event_date %>
+  <%= date_field_tag :event_date %>
+
+  <%= label_tag :event_time %>
+  <%= text_field_tag :event_time %>
+  
+  <%= label_tag :next_event_img %>
+  <%= text_field_tag :next_event_img %>
+  <%= submit_tag %>
+<% end %>

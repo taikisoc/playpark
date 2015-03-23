@@ -1,32 +1,33 @@
-<div>
-  <% if @user.fullname.blank? %>
-      <h3><%= @user.nickname %>さんのスケジュール</h3>
-  <% else %>
-      <h3><%= @user.fullname %>さんのスケジュール</h3>
-  <% end %>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <% if @user.fullname.blank? %>
+            <h3><%= @user.nickname %>さんのスケジュール</h3>
+        <% else %>
+            <h3><%= @user.fullname %>さんのスケジュール</h3>
+        <% end %>
+      </div>
+    </div>
+    <%= form_tag("/students/#{@user.id}/schedules", method: :post) do %>
+      <div>
+        <p>自己紹介</p>
+          <%= text_field_tag :introduction, nil, :required => true%>
+      </div>
+      <div>
+        <p>希望場所</p>
+        <%= text_field_tag :where_go, nil, :required => true%>
+      </div>
+      <div>
+        <p>聞きたい内容</p>
+          <%= text_area_tag :ask_about, nil, :required => true %>
+      </div>
+        <p>
+          <input type="submit" value="送信する">
+        </p>
+    <% end %>
+  </div>
 </div>
-<%= form_tag("/students/#{@user.id}/schedules", method: :post) do %>
-  <div>
-    <p>
-      聞きたい内容：
-      <%= text_field_tag :ask_about, nil, :required => true %>
-   </p>
-  </div>
-  <div>
-    <p>
-
-      希望場所：<%= text_field_tag :where_go, nil, :required => true%>
-    </p>
-  </div>
-  <div>
-    <p>
-      自己紹介：<%= text_field_tag :introduction, nil, :required => true %>
-    </p>
-  </div>
-    <p>
-      <input type="submit" value="送信する">
-    </p>
-<% end %>
 
 
 
