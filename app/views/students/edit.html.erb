@@ -1,19 +1,23 @@
-<h2>自己紹介記入ページ</h2>
-
-<%= form_tag("/students/#{current_user.id}", method: :patch) %>
+<div class="intro-form form-group">
+  <h2>自己紹介記入ページ</h2>
+  <%= form_tag("/students/#{current_user.id}", method: :patch) %>
   <div>
-    <p>
-      名前：<input type="text" name="fullname" size="40" maxlength="20" >
-    </p>
+    <label for="" class="control-label">名前</label>
+    <input type="text" name="fullname" size="40" maxlength="20" class="form-control" >
+  </div>
+  <div>
+    <label for="" class="control-label">好きなこと〜</label>
+    <input type="text" name="hobby_1" size="40" maxlength="20" class="form-control" >
+  </div>
+  <div>
+    <label for="" class="control-label">好きなこと〜</label>
+    <input type="text" name="hobby_2" size="40" maxlength="20" class="form-control" >
   </div>
   <div class="under-box">
-    <p>
-      自己紹介記入:<br>
-      <textarea name="introduction"  maxlength="1000" ></textarea>
-    </p>
+    <label for="" class="control-label">自己紹介記入</label>
+    <textarea name="introduction"  maxlength="1000" class="form-control"></textarea>
   </div>
   <div class="submit-button">
-    <p>
       <input type="submit" value="送信する">
-    </p>
   </div>
+</div>

@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
-  layout '2nd_application', only: :show
+  layout '2nd_application', only: [:show,:edit,:update]
   def index
-    @users = User.where(separate: 2).order('id asc').limit(20)
+    @users = User.where(separate: 3).order('id asc').limit(20)
   end
 
   def edit
@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
 
   private
   def update_params
-    params.permit(:fullname, :introduction)
+    params.permit(:fullname, :introduction,:hobby_1,:hobby_2,:hobby_3)
   end
 
   def edit_params

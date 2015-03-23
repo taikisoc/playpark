@@ -3,29 +3,29 @@
       <h2>スタッフ紹介</h2>
     </div>
   </div>
-  <div class="row">
-    <ul class="container-every">
+  <div class="row container-every">
+    <ul class="">
       <li>
         <% @users.each do |gakusei|%>
-          <div class="intro-box well">
+          <div class="intro-box">
             <div>
               <img src="<%= gakusei.avatar %>" class="student_image">
             </div>
             <div class="index-fullname">
-              <a>名前 : <%= gakusei.fullname %></a>
+              <p>名前 : <%= gakusei.fullname %></p>
             </div>
             <div class="index-hobby1">
-              <a>趣味1 : <%= gakusei.hobby_1 %></a>
+              <p>趣味1 : <%= gakusei.hobby_1 %></p>
             </div>
             <div class="index-hobby2">
-              <a>趣味2 : <%= gakusei.hobby_2 %></a>
+              <p>趣味2 : <%= gakusei.hobby_2 %></p>
             </div>
             <div class="intro-button st-btn btn btn-primary">
               <%= link_to '自己紹介表示', "students/#{gakusei.id}",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;",:style => "color:white;" %>
             </div>
               <% if user_signed_in? && current_user.separate == 2 && current_user.id == gakusei.id %>
                 <div class="intro-button st-btn btn btn-primary">
-                  <%= link_to '自己紹介記入', "students/#{gakusei.id}/edit" %>
+                  <%= link_to '自己紹介記入', "students/#{gakusei.id}/edit",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;",:style => "color:white;" %>
                 </div>
               <% end %>
           </div>

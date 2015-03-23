@@ -3,11 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
   resources :park
   resources :dantai
+  # ログイントークン
+  get 'token/:uuid', :to => 'users#token'
+
 
 
   resources :tops do
     collection do
-      resources :nextacts, only: [:index,:new,:show]
+      resources :nextacts, only: [:index,:new,:show,:create]
     end
   end
 

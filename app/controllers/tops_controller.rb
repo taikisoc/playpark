@@ -5,6 +5,7 @@ class TopsController < ApplicationController
     else
       @activities = Activity.page(params[:page]).per(2).order('id desc')
     end
+     @nextacts = Nextact.order('id desc').limit(1)
   end
 
   def sign_up
@@ -29,13 +30,12 @@ class TopsController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
-    activity = Activity.find(params[:id])
-    activity.update(event_params)
+    @activity.update(event_params)
   end
 
   private
   def event_params
-    params.permit(:event_place, :event_station, :event_time, :event_date, :event_people, :event_bring, :event_else, :event_place_img)
+    params.permit(:event_place, :event_station, :event_time, :event_date, :event_people, :event_bring, :event_else, :event_place_img,:event_what,:event_img1,:event_img2,:event_img3,:event_p_img)
   end
 
   def params_edit

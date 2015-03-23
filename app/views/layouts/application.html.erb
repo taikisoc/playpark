@@ -14,40 +14,47 @@
   </head>
   <body>
     <header>
-    <div class="container-every">
-      <div class="row">
-          <div class="col-xs-12  col-md-6 pull-left text-left">
-              <div class="logo">
-                <a href="/" alt="logo">
-                  <h3>とりっぷぱーく</h3>
-                </a>
-              </div>
-          </div>
-          <div class="col-xs-12 col-md-6 pull-right">
-            <div class="header-upper-right">
-              <% if user_signed_in?%>
-                <li class="upper-list" ><a><%= current_user.nickname %>でログイン中</a></li>
-                <li class="upper-list"><a href="/users/sign_out" >サインアウト</a></li>
-              <% else %>
-                <li class="upper-list"><a href="/users/sign_in" >ログイン</a></li>
-                <li class="upper-list"><a href="/users/sign_up" >登録</a></li>
-              <% end %>
-            </div>
-          </div>
+      <div class="header-uppers clearfix">
+        <div class="header-upper-rights">
+          <% if user_signed_in?%>
+            <li class="upper-list" ><a><%= current_user.fullname %>でログイン中</a></li>
+            <li class="upper-list"><a href="/users/sign_out" >サインアウト</a></li>
+          <% else %>
+            <li class="upper-list top-not-login"><a href="/users/sign_in" >ログイン</a></li>
+            <li class="upper-list"><a href="/users/sign_up" >新規登録</a></li>
+          <% end %>
+        </div>
       </div>
-      <div class="row">
-          <div class="col-xs-12 col-sm-3 col-md-3 header-list-left">
-            <ul class="nav nav-pills nav-stacked">
-                <li class=""><a href="/">ほーむ</a></li>
-                <li class=""><a href="/dantai">とりっぷぱーくとは？</li></a>
-                <li class=""><a href="/students">がくせいすたっふ</li></a>
-               <!--  <a href="/park" class="btn btn-default"><li class="header-list">公園情報</li></a> -->
-                <li class=""><a href="">おといあわせ</li></a>
-              </ul>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="header-uppers">
+          <div class="header-list-left">
+            <ul class="nav nav-pills">
+              <li class=""><a href="/">ホーム</a></li>
+              <li class=""><a href="/dantai">コンセプト</li></a>
+              <li class=""><a href="/students">学生スタッフ</li></a>
+              <!--  <a href="/park" class="btn btn-default"><li class="header-list">公園情報</li></a> -->
+              <li class=""><a href="">お問い合わせ</li></a>
+            </ul>
           </div>
-          <div class="slide_show col-xs-12 col-sm-8 col-md-8">
-              <img src="/images/main/play_image4.jpg" class="img-responsive "alt="画像1" class="active" class="img-responsive">
-          </div>
+        </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-every">
+      <div class="slide_show">
+          <img src="/images/main/tripparkhome3.jpg" class="img-responsive "alt="画像1" class="active" class="img-responsive">
       </div>
     </div>
     </header>
