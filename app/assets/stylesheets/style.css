@@ -1345,7 +1345,7 @@ margin-top: 225px;
   margin-top: 6px;
 }
 .event_big_box1{
-  width: 878px;
+  width: 74%;
   height: 397px;
   background-color: #F7F7F7;
   border-radius: 217px;
@@ -1359,6 +1359,14 @@ margin-top: 225px;
 .event-top a{
   font-weight: bold;
   color:#000000;
+}
+.event_top_left1{
+
+}
+
+
+.event_top_right1{
+
 }
 .container-every{
   margin: 0 auto;
