@@ -45,6 +45,9 @@
                   <div class="event_what1">
                     <h1><%= act.event_what %></h1>
                   </div>
+                  <div class="event_left_under">
+                    <a href="tops/<%= act.id %>">詳細表示</a>
+                  </div>
                 </div>
                 <div class=" event_top_right1">
                   <div class="event_image1">
@@ -56,9 +59,6 @@
                   <div class="event_image3">
                     <img src="<%= act.event_img3  if act.present? %>">
                   </div>
-                </div>
-                <div class="event-right-under">
-                    <a href="tops/<%= act.id %>">詳細表示</a>
                 </div>
               </div>
             </div>
