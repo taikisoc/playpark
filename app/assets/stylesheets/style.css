@@ -1363,21 +1363,23 @@ margin-top: 225px;
   color:#000000;
 }
 .event_date1{
-  margin-top: 45px;
-  margin-bottom: 40px;
-  height: 83px;
+  margin-top: 98px;
+  margin-bottom: 19px;
+  height: 72px;
+  margin-left: 46px;
 }
 .event_date1 h1{
-  font-size: 61px;
+  font-size: 41px;
   line-height: 1;
 }
-.event_what1{
-  margin-top: 45px;
-  margin-bottom: 40px;
+.event_place1{
+  margin-top: -10px;
+  margin-bottom: 30px;
   height: 83px;
+  margin-left: 12px;
 }
-.event_what1 h1{
-  font-size: 61px;
+.event_place1 h1{
+  font-size: 44px;
   line-height: 1;
 }
 .event_top_left1{
