@@ -1,9 +1,9 @@
 class TopsController < ApplicationController
   def index
     if params[:keyword].present?
-      @activities = Activity.where('event_place LIKE ?', "%#{params[:keyword]}%").page(params[:page]).order('id DESC').limit(2)
+      @activities = Activity.where('event_place LIKE ?', "%#{params[:keyword]}%").page(params[:page]).order('id DESC').limit(3)
     else
-      @activities = Activity.page(params[:page]).per(2).order('id desc')
+      @activities = Activity.page(params[:page]).per(3).order('id desc')
     end
      @nextacts = Nextact.order('id desc').limit(1)
   end

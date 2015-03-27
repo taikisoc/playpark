@@ -1313,7 +1313,7 @@ margin-top: 225px;
   display: block;
   clear: both;
   width: 90%;
-  height: 188px;
+  height: 175px;
 }
 
 .nav-upper{
@@ -1330,7 +1330,6 @@ margin-top: 225px;
   background-color: #F7F7F7;
   border-radius: 165px;
   border: 4px solid #02964A;
-  margin-top: 36px;
   margin-right: 10px;
 }
 
@@ -1346,17 +1345,18 @@ margin-top: 225px;
   margin-top: 6px;
 }
 .event_big_box1{
-  width: 33%;
+  width: 32%;
   height: 397px;
   background-color: #F7F7F7;
   border-radius: 217px;
   border: 4px solid #02964A;
-  margin-bottom: 30px;
+  margin-bottom: 56px;
   margin-top: 12px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   float:left;
+  margin-right: 16px;
 }
 .event-top a{
   font-weight: bold;
