@@ -1346,7 +1346,7 @@ margin-top: 225px;
 }
 .event_big_box1{
   width: 32%;
-  height: 397px;
+  height: 392px;
   background-color: #F7F7F7;
   border-radius: 217px;
   border: 4px solid #02964A;
@@ -1412,17 +1412,29 @@ margin-top: 225px;
 .link_to_form_top{
   margin: 16px 10px;
 }
+.event_image1{
+  margin-top: 45px;
+  margin-left: -21px;
+}
 .event_image1 img{
   border-radius: 220px;
   width: 100px;
   height: 100px;
   margin:5px 5px;
 }
+.event_image2{
+  margin-top: 10px;
+  margin-left: 30px;
+}
 .event_image2 img{
   border-radius: 220px;
   width: 69px;
   height: 69px;
   margin:5px 5px;
+}
+.event_image3{
+  margin-top: 4px;
+  margin-left: -39px;
 }
 .event_image3 img{
   border-radius: 220px;
