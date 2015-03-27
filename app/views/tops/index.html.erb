@@ -38,13 +38,15 @@
           <% @activities.each do |act| %>
             <div class="event_big_box1">
               <div class="clearfix1">
-                <div class=" event_date1">
-                  <h1><%= act.event_date %></h1>
+                <div class="enent_top_left">
+                  <div class=" event_date1">
+                    <h1><%= act.event_date %></h1>
+                  </div>
+                  <div class="event_what1">
+                    <h1><%= act.event_what %></h1>
+                  </div>
                 </div>
-                <div class="event_what1">
-                  <h1><%= act.event_what %></h1>
-                </div>
-                <div class=" event_right1">
+                <div class=" event_top_right1">
                   <div class="event_image1">
                     <img src="<%= act.event_img1  if act.present? %>">
                   </div>
