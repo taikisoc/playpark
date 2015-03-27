@@ -1308,6 +1308,11 @@ margin-top: 225px;
   /*<mail_success>*/
 /*<event_page>*/
 
+.container_top_event{
+  margin: 0 auto;
+  width: 96%;
+  text-align: center;
+}
 .event_top_container{
   content: "";
   display: block;
@@ -1345,7 +1350,7 @@ margin-top: 225px;
   margin-top: 6px;
 }
 .event_big_box1{
-  width: 32%;
+  width: 31%;
   height: 392px;
   background-color: #F7F7F7;
   border-radius: 217px;
@@ -1413,33 +1418,33 @@ margin-top: 225px;
   margin: 16px 10px;
 }
 .event_image1{
-  margin-top: 45px;
+  margin-top:-3px;
   margin-left: -21px;
 }
 .event_image1 img{
   border-radius: 220px;
-  width: 100px;
-  height: 100px;
+  width: 145px;
+  height: 145px;
   margin:5px 5px;
 }
 .event_image2{
-  margin-top: 10px;
+  margin-top: 3px;
   margin-left: 30px;
 }
 .event_image2 img{
   border-radius: 220px;
-  width: 69px;
-  height: 69px;
+  width: 102px;
+  height: 102px;
   margin:5px 5px;
 }
 .event_image3{
-  margin-top: 4px;
-  margin-left: -39px;
+  margin-top: 1px;
+  margin-left: -60px;
 }
 .event_image3 img{
   border-radius: 220px;
-  width: 84px;
-  height: 84px;
+  width: 112px;
+  height: 112px;
   margin:5px 5px;
 }
 /*<event_page>*/
