@@ -1334,7 +1334,7 @@ margin-top: 225px;
   height: 126px;
   background-color: #F7F7F7;
   border-radius: 165px;
-  border: 4px solid #02964A;
+  border: 2px solid #555;
   margin-right: 10px;
 }
 
@@ -1354,7 +1354,7 @@ margin-top: 225px;
   height: 392px;
   background-color: #F7F7F7;
   border-radius: 217px;
-  border: 4px solid #02964A;
+  border: 2px solid #555;
   margin-bottom: 56px;
   margin-top: 12px;
   display: block;
@@ -1376,6 +1376,7 @@ margin-top: 225px;
 .event_date1 h1{
   font-size: 41px;
   line-height: 1;
+  color:#555;
 }
 .event_place1{
   margin-top: -10px;
@@ -1386,6 +1387,7 @@ margin-top: 225px;
 .event_place1 h1{
   font-size: 44px;
   line-height: 1;
+  color:#555;
 }
 .event_top_left1{
   width: 54%;
