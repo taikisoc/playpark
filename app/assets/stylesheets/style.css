@@ -1135,6 +1135,7 @@ body{
   margin-left: 30px;
   margin:0;
   font-weight: bold;
+  color:#555;
 }
 .students-top-logo{
   width:100%;
@@ -1161,7 +1162,7 @@ body{
   margin:11px 11px 19px;
   float:left;
   margin-top: 14px;
-  border: solid 3px;
+  border: solid 5px #555;
   border-top-left-radius: 127px;
   border-top-right-radius: 127px;
 }
@@ -1169,24 +1170,24 @@ body{
   padding: 11px 3px 4px 3px;
 }
 .index-fullname p{
-  color: #000000;
-  font-size: 13px;
+  color: #555;
+  font-size: 15px;
   font-weight: bold;
 }
 .index-hobby1{
   padding: 4px 3px 4px 3px;
 }
 .index-hobby1 p{
-  color: #000000;
-  font-size: 13px;
+  color: #555;
+  font-size: 15px;
   font-weight: bold;
 }
 .index-hobby2{
   padding: 4px 3px 4px 3px;
 }
 .index-hobby2 p{
-  color: #000000;
-  font-size: 13px;
+  color: #555;
+  font-size: 15px;
   font-weight: bold;
 }
 .clearfix:after{
