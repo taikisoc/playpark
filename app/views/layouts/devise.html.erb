@@ -6,30 +6,46 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
- <header>
-    <div class="container-every">
-      <div class="header-uppers clearfix">
-        <div class="header-list-left">
-          <ul class="nav nav-pills">
+  <header>
+    <div class="header-uppers clearfix">
+      <div class="header-upper-rights">
+        <% if user_signed_in?%>
+          <li class="upper-list" ><a><%= current_user.fullname %>でログイン中</a></li>
+          <li class="upper-list"><a href="/users/sign_out" >サインアウト</a></li>
+        <% else %>
+          <li class="upper-list top-not-login"><a href="/users/sign_in" >ログイン</a></li>
+          <li class="upper-list"><a href="/users/sign_up" >新規登録</a></li>
+        <% end %>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="header-uppers">
+          <div class="header-list-left">
+            <ul class="nav nav-pills">
               <li class=""><a href="/">ホーム</a></li>
               <li class=""><a href="/dantai">コンセプト</li></a>
               <li class=""><a href="/students">学生スタッフ</li></a>
-             <!--  <a href="/park" class="btn btn-default"><li class="header-list">公園情報</li></a> -->
+              <!--  <a href="/park" class="btn btn-default"><li class="header-list">公園情報</li></a> -->
               <li class=""><a href="">お問い合わせ</li></a>
             </ul>
+          </div>
         </div>
-        <div class="header-upper-rights">
-          <% if user_signed_in?%>
-            <li class="upper-list" ><a><%= current_user.fullname %>でログイン中</a></li>
-            <li class="upper-list"><a href="/users/sign_out" >サインアウト</a></li>
-          <% else %>
-            <li class="upper-list"><a href="/users/sign_in" >ログイン</a></li>
-            <li class="upper-list"><a href="/users/sign_up" >登録</a></li>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    </header>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
   <body>
 
     <%= yield %>

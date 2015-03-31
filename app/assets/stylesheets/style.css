@@ -1006,7 +1006,10 @@ body{
   }
 .navbar{
   border-color: #ffffff;
-  box-shadow: #ffffff;
+  box-shadow: inset 0 0px 0 rgba(0, 0, 0, 0), 0 0px 0px rgba(0, 0, 0, 0);
+}
+.nabvar-default{
+  webkit-box-shadow: #ffffff;
 }
 .container-fluid{
   padding-right: 0px;
