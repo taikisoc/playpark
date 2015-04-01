@@ -94,8 +94,8 @@ body{
   color:#000000;
 }
 .header-list-left ul li {
-  border-left: solid 2px #efefef;
-  width: 49%;
+  border-bottom: solid 2px #555;
+  width: 96%;
   text-align: center;
 }
 .header-list-left{
