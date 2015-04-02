@@ -48,8 +48,6 @@ group :development, :test do
   gem 'devise'
   gem 'paperclip'
   gem 'kaminari'
-  gem 'omniauth'
-  gem 'omniauth-facebook'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'font-awesome-sass'
 end

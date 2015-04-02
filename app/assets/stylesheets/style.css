@@ -16,7 +16,8 @@ line-height : 1.5
 h1,h2,h3,h4,h5,h6 {margin:0 auto;}
 h1 {
 font-size : 48px; 
-line-height : 1} /* 48px */
+line-height : 1;
+font-weight: 300;} /* 48px */
 
 h2 {
 font-size : 36px;
@@ -38,7 +39,7 @@ header{
   height:auto;
 }
 a{
-  font-weight: bold;
+  font-weight: 300;
 }
 body{
   background-color: #FFFFFF
@@ -93,7 +94,7 @@ body{
   font-size: 46px;
   font-family: fantasy;
   color: #02964A;
-  font-weight: bold;
+  font-weight: 300;
 }
 .log h3:hover {color:#FFA500;}
 .logo a{
@@ -128,10 +129,11 @@ body{
   margin-right: 30px;
   margin-top: 12px;
 }
+.header-list-left ul li a:hover {color:#FFA500;}
 .header-list-left ul li a{
   padding-bottom: 25px;
   padding-top: 20px;
-  font-weight: bold;
+  font-weight: 300;
   font-size:15px;
   letter-spacing: 0.81em;
   color:#555;
@@ -139,6 +141,7 @@ body{
 }
 .header-list a{
   font-size: 20px;
+  font-weight: 300;
 }
 .upper-list a:hover {color:#FFA500;}
 .header-upper-rights{
@@ -151,12 +154,13 @@ body{
   text-align: center;
   margin-bottom: 2px;
   padding: 0px 15px 5px 40px;
+  font-weight: 300;
 }
 .header-upper-rights li a{
   letter-spacing: 1.11em;
   color: #555;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .top-not-login{
   margin-left: 29%;
@@ -166,6 +170,7 @@ body{
   margin-bottom: 8px;
   margin-top: 2px;
   font-size: 20px;
+  font-weight: 300;
 }
 /*<home_page>*/
 
@@ -180,7 +185,7 @@ body{
   font-size: 48px;
   margin-left: 30px;
   margin:0;
-  font-weight: bold;
+  font-weight: 300;
   color:#555;
 }
 .students-top-logo{
@@ -218,7 +223,7 @@ body{
 .index-fullname p{
   color: #555;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .index-hobby1{
   padding: 4px 3px 4px 3px;
@@ -226,7 +231,7 @@ body{
 .index-hobby1 p{
   color: #555;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .index-hobby2{
   padding: 4px 3px 4px 3px;
@@ -234,7 +239,7 @@ body{
 .index-hobby2 p{
   color: #555;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 300;
 }
 .clearfix:after{
   content: "";
@@ -247,6 +252,7 @@ li{
 }
 .list a{
   font-size: 21px;
+  font-weight: 300;
 }
 .intro-button{
 background-color: #555;
@@ -266,6 +272,7 @@ padding: 4px 12px;
   width:100px;
   height: 80px;
   font-size: 20px;
+  font-weight: 300;
 }
 .success{
   width: 46%;
@@ -276,6 +283,7 @@ text-align: center
 .success a{
   margin-top: 85px;
   font-size: 25px;
+  font-weight: 300;
 }
 /*<introduction_write>*/
 /*<introduction_edit>*/
@@ -354,7 +362,19 @@ margin-top: 225px;
 }
   /*<mail_success>*/
 /*<event_page>*/
-
+.active a:hover{color:#555;}
+.pagination li a:hover {color:#FFA500;}
+.pagination li a{
+  z-index: 2;
+  color: #555;
+  cursor: default;
+}
+.active a{
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  border-color: #555;
+}
 .container_top_event{
   margin: 0 auto;
   width: 96%;
@@ -372,9 +392,11 @@ margin-top: 225px;
   margin-top: 30px;
    margin-bottom: 35px;
 }
+.nav-upper li a:hover {color:#FFA500;}
 .nav-upper li a{
-  font-weight: bold;
-  font-size:21px;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.71em;
 }
 .search-form-top{
   width: 288px;
@@ -386,6 +408,7 @@ margin-top: 225px;
 
 .search-form-top label{
   font-size: 16px;
+  font-weight: 300;
 }
 .search-label{
   margin-left: -35px;
@@ -409,7 +432,7 @@ margin-top: 225px;
   margin-left: 12%;
 }
 .event-top a{
-  font-weight: bold;
+  font-weight: 300;
   color:#000000;
 }
 .event_date1{
@@ -423,6 +446,7 @@ margin-top: 225px;
   font-size: 38px;
   line-height: 1;
   color:#555;
+  font-weight: 300;
 }
 .event_place1{
   margin-top: -18px;
@@ -434,11 +458,18 @@ margin-top: 225px;
   font-size: 44px;
   line-height: 1;
   color:#555;
+  font-weight: 300;
 }
 .event_top_left1{
   width: 58%;
   float: left;
   height: 387px;
+}
+.event_left_under a:hover {color:#FFA500;}
+.event_left_under a{
+  color: #555;
+  font-size: 20px;
+  font-weight: 300;
 }
 .event_top_right1{
   width: 42%;
@@ -461,6 +492,7 @@ margin-top: 225px;
 }
 .for_administrator a{
   font-size: 18px;
+  font-weight: 300;
 }
 .link_to_form_top{
   margin: 16px 10px;
@@ -562,15 +594,15 @@ margin-top: 225px;
 /*<about-page>*/
 .about-tripark{
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 300;
   line-height: 3;
   letter-spacing: 0.07em;
 }
 .about-tripark-top{
   text-align: center;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 3;
   letter-spacing: 0.30em;
 }
