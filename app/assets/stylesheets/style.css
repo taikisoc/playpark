@@ -68,7 +68,7 @@ body{
   clear: both;
 }
 .slide_show img{
-  max-width:100%;
+  max-width:79%;
   margin:0 auto ;
   margin-top: 25px;
 }
