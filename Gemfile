@@ -40,7 +40,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+end
+gem 'spring'
   gem 'pry-rails'
   gem 'compass-rails'
   gem 'sprockets','2.11.0'
@@ -50,5 +51,3 @@ group :development, :test do
   gem 'kaminari'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'font-awesome-sass'
-end
- ruby '2.0.0'
