@@ -407,11 +407,11 @@ margin-top: 225px;
 }
 
 .search-form-top label{
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 300;
 }
 .search-label{
-  margin-left: -35px;
+  margin-left: 6px;
   margin-top: 21px;
 }
 .search-form{
@@ -568,10 +568,10 @@ margin-top: 225px;
 /*<login_page>*/
 .verticalcenter{
   position: absolute;
-  top: 53%;
-  left: 40%;
-  height: 434px;
-  width: 708px;
+  top: 41%;
+  left: 31%;
+  height: 384px;
+  width: 854px;
   margin-left: -231px;
   margin-top: -150px;
 }
@@ -583,10 +583,10 @@ margin-top: 225px;
 /*<sign_up>*/
 .verticalcenter2{
   position: absolute;
-  top: 53%;
-  left: 40%;
-  height: 479px;
-  width: 708px;
+  top: 41%;
+  left: 31%;
+  height: 543px;
+  width: 854px;
   margin-left: -231px;
   margin-top: -150px;
 }
@@ -620,9 +620,22 @@ margin-top: 225px;
   margin-top: 15px;
   margin-bottom: 10px;
 }
-input{
-  width: 239px;
-  border-radius: 13px;
-  height: 30px;
+.actions{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.70em;
+}
+.panel-title h2{
+  color:#555;
+  font-weight: 300;
+  letter-spacing: 0.70em;
+}
+.panel-heading{
+  margin-top: 15px;
 }
 /*<login&lsignup>*/
