@@ -585,7 +585,7 @@ margin-top: 225px;
   position: absolute;
   top: 53%;
   left: 40%;
-  height: 434px;
+  height: 479px;
   width: 708px;
   margin-left: -231px;
   margin-top: -150px;
@@ -616,5 +616,13 @@ margin-top: 225px;
 }
 /*<about-page>*/
 /*<login&lsignup>*/
-
+.field{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+input{
+  width: 239px;
+  border-radius: 13px;
+  height: 30px;
+}
 /*<login&lsignup>*/
