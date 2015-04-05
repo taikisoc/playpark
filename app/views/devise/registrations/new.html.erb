@@ -12,7 +12,7 @@
               <%= devise_error_messages! %>
 
               <div class="field"><br />
-                ママパパ：<%= f.radio_button 'separate', '1', {:checked => true} %>
+                ママ・パパ：<%= f.radio_button 'separate', '1', {:checked => true} %>
                 学生：<%= f.radio_button 'separate', '2', {} %>
               </div>
               <div class="field">
@@ -36,7 +36,8 @@
                 <%= f.label :パスワード入力確認 %><br />
                 <%= f.password_field :password_confirmation, autocomplete: "off" ,:placeholder => 'パスワード確認'%>
               </div>
-              <div class="label"><%= f.label :好きな画像を添付 %><br />
+              <div class="field">
+                <%= f.label :好きな画像を添付 %><br />
                 <%= f.file_field :avatar %>
               </div>
 

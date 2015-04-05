@@ -615,3 +615,8 @@ margin-top: 225px;
   border-radius:198px;
 }
 /*<about-page>*/
+/*<login&lsignup>*/
+.field{
+  display:inline-block;
+}
+/*<login&lsignup>*/
