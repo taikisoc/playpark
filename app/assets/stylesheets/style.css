@@ -129,6 +129,7 @@ body{
   margin-right: 30px;
   margin-top: 12px;
 }
+.header-list-left ul li a:hover {background-color:#fff;}
 .header-list-left ul li a:hover {color:#FFA4FD;}
 .header-list-left ul li a{
   padding-bottom: 25px;
@@ -138,6 +139,7 @@ body{
   letter-spacing: 0.81em;
   color:#555;
   display:block;
+  background-color: #fff;
 }
 .header-list a{
   font-size: 20px;
@@ -146,8 +148,8 @@ body{
 /*.home-hover a:hover {color:#FFA4FD;}
 .concept-hover a:hover {color:#F3f0b7;}
 .staff-hover a:hover {color:#6b8eb2;}
-.contact-hover a:hover {color:#FFA4FD;}
-.upper-list a:hover {color:#c66d37;}*/
+.contact-hover a:hover {color:#FFA4FD;}*/
+.upper-list a:hover {color:#FFA500;}
 .header-upper-rights{
   margin: 0;
   width: 60%;
@@ -222,7 +224,7 @@ body{
   border-top-right-radius: 127px;
 }
 .index-fullname{
-  padding: 11px 3px 4px 3px;
+  padding: 9px 3px 0px 3px;
 }
 .index-fullname p{
   color: #555;
@@ -230,7 +232,7 @@ body{
   font-weight: 300;
 }
 .index-hobby1{
-  padding: 4px 3px 4px 3px;
+  padding: 2px 3px 1px 3px;
 }
 .index-hobby1 p{
   color: #555;
@@ -238,7 +240,7 @@ body{
   font-weight: 300;
 }
 .index-hobby2{
-  padding: 4px 3px 4px 3px;
+  padding: 3px 3px 3px 3px;
 }
 .index-hobby2 p{
   color: #555;
