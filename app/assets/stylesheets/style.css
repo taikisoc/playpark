@@ -185,11 +185,12 @@ body{
   margin-left: 37px;
 }
 .students-show-logo h2{
-  font-size: 48px;
+  font-size: 25px;
   margin-left: 30px;
   margin:0;
   font-weight: 300;
   color:#555;
+  letter-spacing: 0.72em;
 }
 .students-top-logo{
   width:100%;
@@ -647,3 +648,12 @@ margin-top: 225px;
 font-size: 19px;
 }
 /*<login&lsignup>*/
+/*<dantai_show_page>*/
+.dantai-top h2{
+  font-size: 25px;
+  margin: 0;
+  font-weight: 300;
+  color: #555;
+  letter-spacing: 0.52em;
+}
+/*<dantai_show_page>*/
