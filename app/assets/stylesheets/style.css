@@ -643,4 +643,7 @@ margin-top: 225px;
 .panel-heading{
   margin-top: 15px;
 }
+#error_explanation h2{
+font-size: 19px;
+}
 /*<login&lsignup>*/
