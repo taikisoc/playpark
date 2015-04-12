@@ -67,6 +67,7 @@ body{
   max-width:79%;
   margin:0 auto ;
   margin-top: 25px;
+  border-radius: 6px;
 }
 .header-upper{
   background-color: #F7F7F7;
