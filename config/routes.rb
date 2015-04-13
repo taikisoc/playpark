@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   root 'tops#index'
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :park
   resources :dantai
   # ログイントークン
   get 'token/:uuid', :to => 'users#token'
   resources :members
-
-
+  devise_scope :user do
+    get 'users/complete' => 'devise/registrations#complete'
+  end
 
   resources :tops do
     collection do
