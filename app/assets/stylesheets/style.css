@@ -573,13 +573,10 @@ margin-top: 225px;
 
 /*<login_page>*/
 .verticalcenter{
-  position: absolute;
-  top: 41%;
-  left: 31%;
+  position: inherit;
   height: 384px;
   width: 854px;
-  margin-left: -231px;
-  margin-top: -150px;
+  margin: 0 auto;
 }
 .login-p{
   height: 400px;
@@ -588,13 +585,10 @@ margin-top: 225px;
 /*<login_page>*/
 /*<sign_up>*/
 .verticalcenter2{
-  position: absolute;
-  top: 41%;
-  left: 31%;
+  position: inherit;
   height: 571px;
   width: 854px;
-  margin-left: -231px;
-  margin-top: -150px;
+  margin:0 auto;
 }
 /*<sign_up>*/
 /*<about-page>*/
