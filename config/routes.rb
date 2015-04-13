@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :dantai
   # ログイントークン
   get 'token/:uuid', :to => 'users#token'
+  resources :members
 
 
 
