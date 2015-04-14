@@ -642,6 +642,23 @@ margin-top: 225px;
 font-size: 19px;
 }
 /*<login&lsignup>*/
+/*<after_sign_up>*/
+.complete_box{
+  margin:0 auto;
+  width:53%;
+  margin-top: 8%;
+}
+.complete_title h4{
+  height: 41px;
+  font-size:26px;
+  font-weight: 300;
+}
+
+.complete_text p{
+  font-weight: 300;
+  font-size: 17px;
+}
+/*<after_sign_up>*/
 /*<dantai_show_page>*/
 .dantai-top h2{
   font-size: 25px;
