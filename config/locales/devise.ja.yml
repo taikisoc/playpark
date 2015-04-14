@@ -18,7 +18,7 @@ ja:
       unconfirmed: "続ける前に、アカウントの確認をお願いします。"
     mailer:
       confirmation_instructions:
-        subject: "アカウントの登録方法"
+        subject: "color park 仮登録完了"
       reset_password_instructions:
         subject: "パスワードの再設定"
       unlock_instructions:
