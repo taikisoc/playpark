@@ -3,19 +3,19 @@
   <%= form_tag("/students/#{current_user.id}", method: :patch) %>
   <div>
     <label for="" class="control-label">名前</label>
-    <input type="text" name="fullname" size="40" maxlength="20" class="form-control" >
+    <input type="text" name="fullname" size="40" value="<%= @user.fullname %>" maxlength="20" class="form-control" >
   </div>
   <div>
     <label for="" class="control-label">好きなこと〜</label>
-    <input type="text" name="hobby_1" size="40" maxlength="20" class="form-control" >
+    <input type="text" name="hobby_1" size="40" value="<%=@user.hobby_1%>"maxlength="20" class="form-control" >
   </div>
   <div>
     <label for="" class="control-label">好きなこと〜</label>
-    <input type="text" name="hobby_2" size="40" maxlength="20" class="form-control" >
+    <input type="text" name="hobby_2" value="<%=@user.hobby_2%>" size="40" maxlength="20" class="form-control" >
   </div>
   <div class="under-box">
     <label for="" class="control-label">自己紹介記入</label>
-    <textarea name="introduction"  maxlength="1000" class="form-control"></textarea>
+    <textarea name="introduction" maxlength="1000" class="form-control"><%= @user.introduction %></textarea>
   </div>
   <div class="submit-button">
       <input type="submit" value="送信する">

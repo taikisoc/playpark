@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
   def update
     user = User.find(current_user.id)
     user.update(update_params)
+    redirect_to action: :show
   end
 
   private

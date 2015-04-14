@@ -23,7 +23,7 @@
             <div class="intro-button st-btn btn btn-primary">
               <%= link_to '自己紹介表示', "students/#{gakusei.id}",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;",:style => "color:white;" %>
             </div>
-              <% if user_signed_in? && current_user.separate == 2 && current_user.id == gakusei.id %>
+              <% if user_signed_in? && current_user.separate == 3 && current_user.id == gakusei.id %>
                 <div class="intro-button st-btn btn btn-primary">
                   <%= link_to '自己紹介記入', "students/#{gakusei.id}/edit",:onclick=>"window.open(this.href,'hoge', 'height=500, width=600');return false;",:style => "color:white;" %>
                 </div>

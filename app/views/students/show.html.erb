@@ -28,18 +28,16 @@
       </div>
     </div>
     <div class="who-box-right">
-      <% if user_signed_in? && (current_user.separate == 2 || current_user.separate == 1) %>
-          <div class="who-born">
-            <h2>生い立ち</h2>
-          </div>
-          <div class="who-what">
-            <h5><%= @user.introduction %></h5>
-          </div>
-        <% if user_signed_in? &&  current_user.separate == 1 %>
-          <div class="who-lunch">
-            <h3><%= link_to 'ランチする', "#{@user.id}/schedules/new" %></h3>
-          </div>
-        <% end %>
+      <div class="who-born">
+        <h2>生い立ち</h2>
+      </div>
+      <div class="who-what">
+        <h5><%= @user.introduction %></h5>
+      </div>
+      <% if user_signed_in? &&  current_user.separate == 1 %>
+        <div class="who-lunch">
+          <h3><%= link_to 'ランチする', "#{@user.id}/schedules/new" %></h3>
+        </div>
       <% end %>
     </div>
   </div>
