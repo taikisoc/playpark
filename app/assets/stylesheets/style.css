@@ -247,11 +247,6 @@ body{
   font-size: 15px;
   font-weight: 300;
 }
-.clearfix:after{
-  content: "";
-  display: block;
-  clear: both;
-}
 li{
   list-style-type: none;
   padding: 1px 15px;
@@ -269,6 +264,7 @@ padding: 4px 12px;
 }
 /*<introduction_index>*/
 
+@media screen and (min-width: 320px){
 /*<introduction_write>*/
 .under-box p textarea {
   width: 400px;
@@ -301,7 +297,7 @@ text-align: center
 
 /*<introduction_show>*/
 .who-box-biggest{
-  margin:0 auto ;
+  width: 600px;
 }
 .who-box{
   width:100%;
@@ -345,15 +341,15 @@ text-align: center
 }
 .who-box-left{
   float: left;
-  width: 45%;
-  height: 537px;
+  width: 30%;
+  height: 30%;
 }
 .who-box-right{
-  float: right;
-  width:55%;
+  float: left;
+  width:37%;
 }
 /*<introduction_show>*/
-
+}
 /*<mail_success>*/
 .mail-success{
   width: 100%;
