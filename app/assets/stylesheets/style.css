@@ -605,10 +605,15 @@ margin-top: 225px;
 .about-tripark{
   margin:8px 0 10px;
 }
-.taiki-img img{
-  width:400px;
-  height:600px;
-  border-radius:198px;
+
+.establish_why{
+  width: 99%;
+  margin-left: 8%;
+}
+.establish_why p{
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 0.09em;
 }
 /*<about-page>*/
 /*<login&lsignup>*/
@@ -664,6 +669,7 @@ font-size: 19px;
   letter-spacing: 0.52em;
 }
 /*<dantai_show_page>*/
+/*<facebook instagram>*/
 .like_buttons_right{
   float: right;
   width: 29%;
@@ -679,3 +685,33 @@ font-size: 19px;
 .ig-b-48 { width: 48px; height: 48px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-48.png) no-repeat 0 0; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 .ig-b-48 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-48@2x.png); background-size: 60px 178px; } }
+/*<facebook instagram>*/
+/*members*/
+.daihyou_aisatu{
+  width:100%;
+}
+.taiki-img{
+  width: 30%;
+  float:left;
+}
+.taiki-img img{
+  width:282px;
+  height:425px;
+  border-radius:198px;
+}
+.aisatu_bun{
+  width: 65%;
+  float:left;
+  height:394px;
+  margin-top: 5%;
+}
+.aisatu_bun{
+  font-size: 17px;
+  color: #555;
+  letter-spacing: 0.22em;
+  margin-left: 27px;
+  text-align: left;
+  line-height: 2;
+}
+
+/*members*/
