@@ -30,6 +30,7 @@ class StudentsController < ApplicationController
   def show_params
     params.permit(:id)
   end
+  
 end
 
 
